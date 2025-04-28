@@ -62,7 +62,7 @@ Le immagini, i testi e i progetti scolastici pubblicati nel sito sono coperti da
 
 Il sito è attualmente pubblicato tramite **GitHub Pages**, una piattaforma gratuita di hosting per progetti open source.
 
-🔗 **Link al sito**: *serverbertovv.github.io/serverbertovv*
+🔗 **Link al sito**: *serverbertovv.github.io*
 
 ---
 
