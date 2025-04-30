@@ -1,0 +1,12 @@
+# Changelog
+
+Tutti i cambiamenti importanti a questo progetto verranno documentati in questo file.
+
+## [0.1.1] - 2025-04-30
+### Bugfix
+- Fixato un bug di reindirizzamento alla HomePage che si verificava su Safari.
+
+## [0.1.0] - 2025-04-28
+### Nuove funzionalità
+- La pagina "Work-in-progress" è ora online.
+- È disponibile la pagina "Roadmap Sviluppo" per tenere traccia dei progressi futuri.
