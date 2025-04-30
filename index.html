@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ServerBerto</title>
+  <meta charset="UTF-8">
+  <title>Redirect</title>
+  <style>
+    #fallback {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Reindirizzamento alla HomePage</h1>
-    <script>
-        window.location.href= '/work-in-progress.html';
-    </script>
-    <noscript>Attiva JavaScript per continuare!</noscript>
+  <p>Reindirizzamento in corso...</p>
+  <div id="fallback">
+    <p>Se non sei stato reindirizzato automaticamente, clicca il pulsante:</p>
+    <button onclick="redirect()">Vai alla pagina</button>
+  </div>
+
+  <script>
+    const redirectUrl = "'/work-in-progress.html'";
+
+    function redirect() {
+      window.location.href = redirectUrl;
+    }
+
+    // Prova il redirect automatico
+    try {
+      redirect();
+
+      // Se dopo 2 secondi non è stato reindirizzato, mostra il pulsante
+      setTimeout(function () {
+        if (!document.hidden) {  // Probabile che il redirect sia fallito
+          document.getElementById("fallback").style.display = "block";
+        }
+      }, 2000);
+    } catch (e) {
+      // In caso di errore, mostra il fallback
+      document.getElementById("fallback").style.display = "block";
+    }
+  </script>
 </body>
 </html>
