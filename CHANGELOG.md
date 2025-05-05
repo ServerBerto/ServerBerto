@@ -2,6 +2,11 @@
 
 Tutti i cambiamenti importanti a questo progetto verranno documentati in questo file.
 
+## [0.1.2] - 2025-05-05
+### Nuove funzionalità
+- Aggiunta una Sitemap al sito
+- Sito Aggiunto nel Motore di Ricerca "Google"
+
 ## [0.1.1] - 2025-04-30
 ### Bugfix
 - Fixato un bug di reindirizzamento alla HomePage che si verificava su Safari.
