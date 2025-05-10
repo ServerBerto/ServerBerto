@@ -1,0 +1,1 @@
+Per un migliore posizionamento usare immagini con risoluzione 1000x500

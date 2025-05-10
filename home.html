@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the ServerBerto platform, the project hub for Liceo Scientifico Statale G. Berto, featuring SYSTEMIA, the Festival delle Scienze 2025, and Element LAB.">
+  <title>ServerBertoVV</title>
+  <link href="/bootstrap-5.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/default.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+     /* Stile per la finestra di avviso */
+     #alertBox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      text-align: center;
+      z-index: 9999;
+    }
+    #alertBox h1 {
+      font-size: 2em;
+    }
+    #alertBox p {
+      margin: 10px 0;
+    }
+    #alertBox .closeButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f39c12;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #alertBox .closeButton:hover {
+      background-color: #e67e22;
+    }
+    #alertBox .social-links {
+      margin-top: 20px;
+    }
+    #alertBox .social-links a {
+      color: white;
+      font-size: 30px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    #alertBox .social-links a:hover {
+      color: #f39c12;
+    }
+
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.5); /* nero con trasparenza */
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main>
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/serverberto.png" class="d-block w-100" alt="Banner 1: ServerBerto">
+          <div class="container">
+            <div class="carousel-caption text-start bg-overlay">
+              <h1>ServerBerto</h1>
+              <p class="opacity-75">Benvenuto sul ServerBerto, il Server del Liceo Scientifico Statale G. Berto di Vibo Valentia</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Server Berto</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/systemia.png" class="d-block w-100" alt="Banner 2: SYSTEMIA">
+          <div class="container">
+            <div class="carousel-caption bg-overlay">
+              <h1>SYSTEMIA</h1>
+              <p>Liceo Scientifico Statale G. Berto di Vibo Valentia</p>
+              <p><a class="btn btn-lg btn-primary" href="/festival_delle_scienze/systemia.html">SYSTEMIA</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/element_lab.png" class="d-block w-100" alt="Banner 3: Element LAB">
+          <div class="container">
+            <div class="carousel-caption text-end bg-overlay">
+              <h1>Element LAB</h1>
+              <p>SYSTEMIA Project</p>
+              <p><a class="btn btn-lg btn-primary" href="/festival_delle_scienze/element_lab/html.html">Visita il Progetto</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Marketing Section -->
+    <div class="container marketing my-5">
+      <div class="row text-center">
+        <div class="col-lg-4">
+          <img src="user.png" class="rounded-circle" alt="Giuseppe Spinoso" width="140" height="140">
+          <h2 class="fw-normal mt-3">Giuseppe Spinoso</h2>
+          <p>Software Developer</p>
+          <!--p><a class="btn btn-secondary" href="#">View details »</a></p-->
+        </div>
+        <div class="col-lg-4">
+          <img src="user.png" class="rounded-circle" alt="Aurora Caporale" width="140" height="140">
+          <h2 class="fw-normal mt-3">Aurora Caporale</h2>
+          <p>Divulgazione Social</p>
+          <!--p><a class="btn btn-secondary" href="#">View details »</a></p-->
+        </div>
+        <div class="col-lg-4">
+          <img src="user.png" class="rounded-circle" alt="Nazareno Calafati" width="140" height="140">
+          <h2 class="fw-normal mt-3">Nazareno Calafati</h2>
+          <p>Divulgazione Social</p>
+          <!--p><a class="btn btn-secondary" href="#">View details »</a></p-->
+        </div>
+      </div>
+
+      <!-- Featurettes -->
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-lg-7">
+          <h2 class="featurette-heading fw-normal lh-1">ServerBerto <span class="text-body-secondary">Il Server del Liceo</span></h2>
+          <p class="lead">Il ServerBertoVV è il primo server privato del Liceo Scientifico Statale Giuseppe Berto di Vibo Valentia. Gestito da un gruppo di alunni del liceo, punta ad essere il sito di riferimento per la pubblicazione di tutti i materiali digitali realizzati dagli studenti. Questo è un progetto no-profit, e abbiamo deciso di aiutare e favorire lo sviluppo informatico rendendo tutto il codice del sito Opensource su GitHub.</p>
+        </div>
+        <div class="col-lg-5">
+          <img src="/images/serverberto.png" class="img-fluid rounded" alt="ServerBerto Logo">
+        </div>        
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-lg-7 order-lg-2">
+          <h2 class="featurette-heading fw-normal lh-1">SYSTEMIA <span class="text-body-secondary">Festival Scienze 2025</span></h2>
+          <p class="lead">Il Festival delle Scienze 2025, denominato SYSTEMIA, si è svolto al Liceo Scientifico Statale G. Berto di Vibo Valentia nelle giornate 8-9-10 Aprile 2025. Durante queste giornate, le classi del Liceo hanno presentato quanto prodotto in questo anno accogliendo anche prestigiosi ospiti come Docenti dell'Università della Calabria fino ad arrivare al Presidente di Google Education Italia.</p>
+        </div>
+        <div class="col-lg-5 order-lg-1">
+          <img src="/images/systemia.png" class="img-fluid rounded mx-auto" alt="SYSTEMIA Event">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-lg-7">
+          <h2 class="featurette-heading fw-normal lh-1">Element LAB <span class="text-body-secondary">SYSTEMIA Project</span></h2>
+          <p class="lead">Element LAB è il primo progetto caricato sul ServerBerto, anzi, è proprio grazie ad Element LAB che è stato creato il ServerBerto. Element LAB è un progetto presentato durante il Festival Delle Scienze 2025 dalla classe 1A. Questo progetto punta a semplificare l'approccio dei bambini alla chimica grazie alla realizzazione di un semplice disegno per ogni elemento della tavola periodica facilitandone l'apprendimento.</p>
+        </div>
+        <div class="col-lg-5">
+          <img src="/images/element_lab.png" class="img-fluid rounded mx-auto" alt="Element LAB Project">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+    </div>
+
+    <!-- Footer -->
+    <footer class="container" style="padding: 2em 0; text-align: center; font-size: 0.9em; color: #555;">
+      <p>
+        Contenuti (testi, immagini, media) rilasciati con licenza 
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. <br>
+        Codice sorgente disponibile su 
+        <a href="https://github.com/serverbertovv/serverbertovv.github.io" target="_blank" rel="noopener">GitHub</a> 
+        sotto licenza <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a>.
+      </p>
+      <p>
+        Questo sito non raccoglie dati personali, non utilizza cookie e non richiede accesso o registrazione. <br>
+        Interamente statico e ospitato su <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
+      </p>
+      <p>
+        <a href="/privacy.html">Informativa Privacy</a> · 
+        <a href="/terms.html">Termini di Utilizzo</a>
+      </p>
+    </footer>
+
+
+  </main>
+
+   <!-- Finestra di avviso -->
+   <div id="alertBox">
+    <h1>Site Work in Progress</h1>
+    <p>This site is currently under development. Follow us on social media to stay updated!</p>
+    <p>This is just a preview of what's to come.</p>
+    <p><strong>GitHub Repository:</strong> <a href="https://github.com/serverbertovv/serverbertovv.github.io" target="_blank" style="color: #f39c12;">Click here to visit our GitHub</a></p>
+    <p><strong>License:</strong> MIT License | <strong>Content License:</strong> CC BY 4.0</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/yourinstagram" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@serverbertovv" target="_blank" title="Follow us on YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/serverbertovv" target="_blank" title="Follow us on GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <button class="closeButton" onclick="closeAlert()">Close</button>
+  </div>
+
+  <script>
+    // Funzione per chiudere la finestra di avviso
+    function closeAlert() {
+      document.getElementById('alertBox').style.display = 'none';
+    }
+  </script>
+
+  <!-- Bootstrap JavaScript Bundle -->
+  <script src="bootstrap-5.3.5/js/bootstrap.bundle.min.js"></script>
+  <script src="/html/load.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tavola Periodica degli Elementi</title>
+  <link href="/bootstrap-5.3.5\css\bootstrap.min.css" rel="stylesheet">
+  <link href="/default.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <style>
+    /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+    background-color: #f0f0f0;
+    box-sizing: border-box
+  }
+  
+  /* Periodic Table Styling */
+  .periodic-table {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr); /* 18 columns */
+    grid-template-rows: repeat(12, 1fr); /* 9 rows */
+    gap: 5px;
+    margin: 10px;
+    margin-top: 200px;
+    width: 100%;
+    max-width: 90vw; /* Limit the table width to 90% of the viewport width */
+    max-height: 80vh; /* Limit the table height to 80% of the viewport height */
+  }
+
+  /* Element Styling */
+  .element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of the grid cell */
+    height: 100%; /* Full height of the grid cell */
+    min-width: 70px; /* Minimum width for each element */
+    min-height: 70px; /* Minimum height for each element */
+    background-color: #e0e0e0;
+    text-align: center;
+    font-size: 1.2em; /* Font size based on available space */
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  /* Element Text Styling */
+  .element .symbol {
+    margin-top: -5px;
+    font-size: 1.2em; /* Symbol font size */
+    font-weight: bold;
+  }
+  
+  .element .atomic-number {
+    margin-top: 1px;
+    font-size: 0.8em; /* Atomic number font size */
+    color: #777;
+  }
+  
+  .element .name {
+    margin-top: -5px;
+    font-size: 0.7em; /* Name font size */
+    color: #555;
+  }
+  
+  /* Hover effect for elements */
+  .element:hover {
+    background-color: #b3cde0;
+    cursor: pointer;
+    transform: scale(1.1); /* Slight scale effect */
+  }
+  
+  /* Empty elements */
+  .empty {
+    background-color: transparent;
+    border: none;
+    min-width: 70px; /* Minimum width for each element */
+    min-height: 70px; /* Minimum height for each element */
+  }
+
+  /* Group Colors */
+  .alkali {
+    background-color: #ff5a5a;
+  }
+  
+  .alkaline-earth {
+    background-color: #ef872d;
+  }
+  
+  .metal-d {
+    background-color: #edd747;
+  }
+
+  .metal-p {
+    background-color: #9ee053;
+  }
+
+  .semimetal {
+    background-color: #5fcdbd;
+  }
+  
+  .post-metal-d {
+    background-color: #cce0ff;
+  }
+  
+  .metalloid {
+    background-color: #d3ffcc;
+  }
+  
+  .nonmetal {
+    background-color: #169cf6;
+  }
+  
+  .noble-gas {
+    background-color: #933aca;
+  }
+
+  .undefined {
+    background-color: #ffffff;
+  }
+  
+  .lanthanide{
+    background-color: #f0e982;
+  }
+
+  .actinide{
+    background-color: #aaef71;
+  }
+
+  .halogens{
+    background-color: #592fd8db;
+}
+
+.big{
+  font-size: 20px;
+}
+  </style>
+<body>
+
+  <div id="navbar"></div>
+
+  <div style="position: absolute; text-align: center;">
+  <h1>Element LAB</h1>
+  <h2>Festival delle Scienze 2025</h2>
+  <h2>Liceo Scientifico Statale G. Berto - Vibo Valentia</h2>
+  </div>
+
+  <div style="position: absolute; margin-left: 35%; margin-right: 25%; margin-top: 175px;">
+    <img id="element_image" src="./images/promezio.png" height="200px" width="200px">
+  </div>
+
+  <div class="periodic-table"></div>
+
+
+  <div style="margin-top: 950px; margin-left: 20px; margin-right: 20px; position: relative;">
+    <div class="container my-5">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Contenuto Scaricabile</h1>
+          <p class="lead">Nazareno Calafati ha curato il documnento sottostante contente le immagini del nostro pogetto. Vi consigliamo di scaricarlo perchè è l'unico momento che avete per farlo prima di perdere questa grandissima occasione.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <a type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" href="./ElementLAB.pdf" donwload>Download PDF</a>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden" style="margin-bottom: 40px; margin-left: 100px;">
+            <img class="rounded-lg-3" src="PDF.png" alt="" width="250">
+        </div>
+      </div>
+    </div>
+
+    <!-- Big -->
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2 justify-content-cnter text-center" style="font-size: 10px;">
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Licia Bevilacqua</h3>
+        <p class="big">Dirigente Scolastico</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Maria Congestrì</h3>
+        <p class="big">Coordinatrice Progetto</p>
+      </div>
+    </div>
+    
+    <!-- ServerBerto -->
+    <h3 style="text-align: center; font-size: 50px;">ServerBerto</h3>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 justify-content-center text-center" style="font-size: 15px;">
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Giuseppe Spinoso</h3>
+        <p>Web Site Developer</p>
+      </div>
+ 	    <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Aurora Caporale</h3>
+        <p>Collaboratrice Telecomunicazioni</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Nazareno Calafati</h3>
+        <p>Realizzazione Documento Scaricabile</p>
+      </div>
+    </div>
+
+    <!-- Hanno Collaborato -->
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 justify-content-center text-center" style="font-size: 15px;">
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Martina Napoli</h3>
+        <p>Web Site CSS Assistent</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Chiara Deleo</h3>
+        <p>Collaboratrice Telecomunicazioni</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Classe 1A</h3>
+        <p>Realizzazioni Disegni Elementi</p>
+      </div>
+    </div>
+    
+    <div class="row g-4 py-5 row-cols-1 row-cols-md-3 justify-content-center text-center">
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Francesco Ferrazzo</h3>
+        <p>Web Site JavaScript Assistent</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Antonio La Grotteria</h3>
+        <p>Assistente Reti Wireless</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Marco Mesiano</h3>
+        <p>Assistente Hardware</p>
+      </div>
+    </div>
+  </div>
+    
+    <script>
+      $('.periodic-table').load('periodic-table.html');
+    </script>
+  <script>
+    function ChangeImage(image_name)
+    {
+      document.getElementById("element_image").src = "images/"+image_name+".png";
+    }
+  </script>
+  <script src="/bootstrap-5.3.5/js/bootstrap.bundle.min.js"></script>
+  <script src="/html/load.js"></script>
+
+  <noscript>Per il corretto funzionamento del sito attivare JavaScript!</noscript>
+
+</body>
+</html>
