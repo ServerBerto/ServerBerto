@@ -1,7 +1,7 @@
 # 🎓 ServerBerto
 
-*Work in Progress*
-È previsto un'importante aggiornamento nel mese di Maggio
+*Preview*
+È possibile vedere una Preview del sito durante lo sviluppo al sito (serverbertovv.github.io/home.html)
 
 **ServerBerto** è il sito web ufficiale sviluppato dagli studenti del *Liceo Scientifico Statale Giuseppe Berto* di Vibo Valentia.  
 È una piattaforma digitale pensata per documentare e condividere progetti, risorse e iniziative della comunità scolastica, offrendo allo stesso tempo un ambiente per sperimentare con il web design e lo sviluppo front-end.
