@@ -1,5 +1,8 @@
 # 🎓 ServerBerto
 
+*Next Update*
+Nei prossimi giorni verrà rilasciato un aggiornamento che prevede l'aggiornamento a Bootstrap 5.3.6
+
 *Preview*
 È possibile vedere una Preview del sito durante lo sviluppo al sito [serverbertovv.github.io/home.html](https://serverbertovv.github.io/home.html)
 
